@@ -8,11 +8,11 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "rundb": "docker rm -f mtb-psql 2>/dev/null; docker run --name mtb-psql -e POSTGRES_PASSWORD=admin -d -p 5432:5432 postgres",
+    "rundb": "docker rm -f -v mtb-psql 2>/dev/null; docker run --name mtb-psql -e POSTGRES_PASSWORD=admin -d -p 5432:5432 postgres",
     "startdb": "docker start mtb-psql",
     "initdb": "PGPASSWORD=admin dropdb --user postgres --host localhost --port 5432 --if-exists mtbmt && PGPASSWORD=admin createdb --user postgres --host localhost --port 5432 mtbmt",
     "stopdb": "docker stop mtb-psql",
-    "rmdb": "docker rm mtb-psql",
+    "rmdb": "docker rm -v mtb-psql",
     "seed": "node db/seed.js"
   },
   "dependencies": {
