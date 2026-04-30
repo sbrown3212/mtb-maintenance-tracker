@@ -13,7 +13,7 @@
     "initdb": "PGPASSWORD=admin dropdb --user postgres --host localhost --port 5432 --if-exists mtbmt && PGPASSWORD=admin createdb --user postgres --host localhost --port 5432 mtbmt",
     "stopdb": "docker stop mtb-psql",
     "rmdb": "docker rm -v mtb-psql",
-    "seed": "node db/seed.js"
+    "seeddb": "node db/seed.js"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",

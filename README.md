@@ -72,7 +72,7 @@ A web application to track and manage maintenance for your mountain bikes. Organ
 4. Seed the database:
 
    ```bash
-   npm run seed
+   npm run seeddb
    ```
 
 5. Start the server:
