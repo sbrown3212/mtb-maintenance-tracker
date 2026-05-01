@@ -61,14 +61,24 @@ A web application to track and manage maintenance for your mountain bikes. Organ
 3. Start & Initialize the database:
 
    ```bash
-   npm run startdb
+   npm run rundb
    npm run initdb
    ```
+
+    `rundb` creates a postgres docker container that uses port 5433 (instead of
+    5432, which is the default for postgres) to avoid conflicts with local
+    postgres services. If port 5433 is already in use, choose a new port and
+    update the values in the `initdb` script in `package.json` and in the `db`
+    variable in `db/model.js`.
+
+    > Only use `rundb` the first use. Use `startdb` afterwards. Using `rundb` after
+    > the initial use will remove the original docker container and create a new
+    > one.
 
 4. Seed the database:
 
    ```bash
-   npm run seed
+   npm run seeddb
    ```
 
 5. Start the server:
