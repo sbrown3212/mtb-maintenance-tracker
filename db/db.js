@@ -5,6 +5,7 @@ const connectToDB = async (dbURI) => {
 
   const sequelize = new Sequelize(dbURI, {
     logging: console.log,
+    username: 'postgres',
     dialect: 'postgres',
     define: {
       timestamps: false,
