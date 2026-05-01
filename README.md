@@ -65,9 +65,9 @@ A web application to track and manage maintenance for your mountain bikes. Organ
    npm run initdb
    ```
 
-  > Only use `rundb` the first use. Use `startdb` afterwards. Using `rundb`
-  > after the initial use will remove the original docker container and create a
-  > new one.
+    > Only use `rundb` the first use. Use `startdb` afterwards. Using `rundb` after
+    > the initial use will remove the original docker container and create a new
+    > one.
 
 4. Seed the database:
 
